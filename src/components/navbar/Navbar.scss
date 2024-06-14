@@ -1,0 +1,93 @@
+header{
+    box-shadow: 0px 4px 12px 0px rgba(207, 207, 207, 0.25);
+    background: rgb(255, 255, 255);
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    .navbar{
+        display: flex;
+        padding: 12px 0;
+        justify-content: space-between;
+        align-items: center;
+        &__links{
+            display: flex;
+            gap: 32px;
+            align-items: center;
+            a{
+                text-decoration: none;
+                color: rgb(112, 115, 124);
+                font-size: 14px;
+                font-weight: 400;
+            }
+            a:hover{
+                color: rgb(53, 151, 64);
+            }
+            a.active{
+                color: rgb(53, 151, 64)
+            }
+        }
+        &__menu{
+            display: flex;
+            gap: 14px;
+            align-items: center;
+            &-social{
+                display: flex;
+                align-items: center;
+                grid-gap: 12px;
+            }
+            &-search{
+                display: flex;
+                align-items: center;
+                padding: 12px 20px;
+                border: 1px solid rgb(239, 239, 239);
+                border-radius: 71px;
+                gap: 20px;
+                svg{
+                    cursor: pointer;
+                }
+                input{
+                    border: none;
+                    background: none;
+                    outline: none;
+                }
+            }
+            &-btns{
+                display: flex;
+                align-items: center;
+                gap: 24px;
+            }
+            &-bar{
+                display: none;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 590px) {
+    header{
+        .navbar__links{
+            display: none;
+        }
+        .navbar__menu-search{
+            display: none;
+        }
+        .navbar__menu-social{
+            display: none;
+        }
+        .navbar__menu-btns a{
+            padding: 7px 9px;
+            border: 1px solid rgb(239, 239, 239);
+            border-radius: 50%;
+        }
+        .navbar__menu-btns a:hover{
+            background: rgb(239, 239, 239);
+        }
+        .navbar__menu-bar{
+            display: block;
+            padding: 12px;
+        }
+    }     
+}
